@@ -19,8 +19,7 @@
     "node": "^13.12.0",
     "node-sass": "^4.13.1",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "sass": "^1.26.3"
+    "react-dom": "^16.12.0"
   },
   "devDependencies": {
     "prettier": "^1.19.1"
