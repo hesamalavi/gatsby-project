@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
 import Layout from "../components/layout"
+import Head from "../components/head"
 
 //  The below was for the.md files, but now pulling data from Contentful
 // export const query = graphql`
@@ -41,6 +42,7 @@ const Blog = props => {
     }
     return (
         <Layout>
+            <Head title={props.data.contentfulBlogPost.title} />
             <h1>{props.data.contentfulBlogPost.title}</h1>
             <p>{props.data.contentfulBlogPost.publishedDate}</p>
             {documentToReactComponents(

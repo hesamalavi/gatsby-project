@@ -1,9 +1,10 @@
 module.exports = {
     siteMetadata: {
-        title: "Hesam Alavi",
+        title: "Hesam's Blog",
         author: "Hesam Alavi",
     },
     plugins: [
+        "gatsby-plugin-react-helmet",
         {
             resolve: "gatsby-source-contentful",
             options: {
@@ -33,6 +34,10 @@ module.exports = {
                         },
                     },
                 ],
+            },
+            resolve: "gatsby-plugin-manifest",
+            options: {
+                icon: `src/favicon/Hesam.jpg`,
             },
         },
     ],
