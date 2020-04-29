@@ -40,5 +40,33 @@ module.exports = {
                 icon: `src/favicon/Hesam.jpg`,
             },
         },
+        {
+            resolve: `gatsby-source-twitter`,
+            options: {
+                credentials: {
+                    consumer_key: process.env.CONSUMER_KEY,
+                    consumer_secret: process.env.CONSUMER_SECRET,
+                    bearer_token: process.env.BEARER_TOKEN,
+                },
+                queries: {
+                    hesam: {
+                        endpoint: "statuses/user_timeline",
+                        params: {
+                            screen_name: "hesamalavi27",
+                            include_rts: false,
+                            exclude_replies: true,
+                            tweet_mode: "extended",
+                        },
+                    },
+                    hesam2: {
+                        endpoint: "search/tweets",
+                        params: {
+                            q: "#hesamalavi27",
+                            tweet_mode: "extended",
+                        },
+                    },
+                },
+            },
+        },
     ],
 }
