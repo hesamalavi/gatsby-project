@@ -1,0 +1,6 @@
+.images {
+    display: grid !important;
+    grid-template-columns: repeat(1, 1fr) !important;
+    grid-template-rows: repeat(8, 5vw);
+    grid-gap: 15px !important;
+}
